@@ -1,0 +1,19 @@
+{
+  "name": "hannahs_server",
+  "version": "1.0.0",
+  "description": "This will be the server that runs Hannah's project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hannah McLaughlin & Joseph Stewart",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "webpack": "^4.16.5"
+  }
+}
