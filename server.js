@@ -2,11 +2,14 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 
+const emailUser = process.env.EMAIL_USER;
+const emailPass = process.env.EMAIL_PASS;
+
 var transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-		user: process.env.EMAIL_USER,
-		pass: process.env.EMAIL_PASS
+		user: emailUser,
+		pass: emailPass,
 	}
 });
 
@@ -24,7 +27,7 @@ app.use(express.static(__dirname + '/../hannahs_server/dist'));
 
 app.post('/contact-form', (request, response) => {
 	const mailOptionsClient = {
-		from: process.env.EMAIL_USER,
+		from: emailUser,
 		to: request.body.email,
 		subject: 'MLC Designs',
 		html: `<p><strong>Name:</strong> ${request.body.name}<br/><strong>Message:</strong> ${request.body.message}</p>`
