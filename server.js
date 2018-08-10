@@ -48,5 +48,4 @@ app.route("*").get((request, response) => {
 	response.redirect('/');
 });
 
-app.listen(8080);
 module.exports = app;
