@@ -26,6 +26,14 @@ h1 {
 	font-size: 36pt;
 }
 
+a {
+	color: white;
+}
+
+a:hover {
+	color: #D8D8D8;
+}
+
 /* PAGE */
 
 .page-header-container {
