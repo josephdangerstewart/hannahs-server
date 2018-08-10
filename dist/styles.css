@@ -6,7 +6,12 @@ body, html {
 	color: white;
 	font-family: 'Rasa';
 	font-size: 14pt;
-	height: 100%;
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+	padding-bottom: 104px;
 }
 
 .content {
@@ -255,11 +260,10 @@ h1 {
 
 .featured-projects-container {
 	background-color: #C7F2B8;
-	margin-bottom: 60px;
 }
 
 .featured-projects-header {
-	background-color: #00367C;
+	background-color: #476842;
 	padding: 3px;
 	padding-left: 10%;
 	text-align: left;
@@ -290,20 +294,18 @@ h1 {
 /* SERVICES SECTION */
 
 .services-container {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: space-evenly;
-	    -ms-flex-pack: space-evenly;
-	        justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
 }
 
 .services-container p {
-	width: 40%;
+	width: 60%;
 	margin: 0 10px;
 }
 
 .services-container ul {
+	margin-top: 20px;
 	-webkit-column-count: 2;
 	        column-count: 2;
 	-webkit-column-gap: 45px;
@@ -318,7 +320,7 @@ h1 {
 
 	.services-container p {
 		width: 100%;
-		margin: 0 10px 20px;
+		padding: 0 10px;
 	}
 
 	.services-container ul {
@@ -373,6 +375,11 @@ h1 {
 .footer-container {
 	padding: 20px;
 	background-color: #476842;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 104px;
+	width: 100%;
 }
 
 .footer-link {
@@ -474,6 +481,16 @@ form .contact-form-button button:focus {
 	        box-shadow: none !important;
 }
 
+@media (max-width: 560px) {
+	.contact-container {
+		flex-direction: column;
+	}
+
+	.contact-form {
+		margin-top: 20px;
+	}
+}
+
 /* ABOUT US */
 
 .about-us-title {
@@ -526,6 +543,23 @@ form .contact-form-button button:focus {
 	}
 
 	.about-us-section p {
+		padding: 0 10px;
+	}
+}
+
+/* CENTER BOX (used for centering things) */
+
+.center-box {
+	text-align: center;
+	margin: 20px 0;
+}
+
+.center-box p {
+	padding: 0 20%;
+}
+
+@media (max-width: 560px) {
+	.center-box p {
 		padding: 0 10px;
 	}
 }
