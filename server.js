@@ -6,6 +6,11 @@ var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+app.get(/images\/(.+)/, (request, response) => {
+	const path = request.params[0];
+	response.redirect('https://res.cloudinary.com/josephdangerstewart/image/upload/v1533859031/hannahs-site/' + path);
+});
+
 app.use(express.static(__dirname + '/../hannahs_server/dist'));
 
 app.use((request, response, next) => {
@@ -17,8 +22,8 @@ app.use((request, response, next) => {
 });
 
 app.route("*").get((request, response) => {
-	console.log('redirecting');
 	response.redirect('/');
 });
 
+app.listen(8080);
 module.exports = app;
