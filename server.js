@@ -2,8 +2,8 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 
-const emailUser = process.env.EMAIL_USER;
-const emailPass = process.env.EMAIL_PASS;
+const emailUser = 'lmcajosephstewart@gmail.com';
+const emailPass = 'jhst3782';
 
 var transporter = nodemailer.createTransport({
 	service: 'gmail',
@@ -51,4 +51,4 @@ app.route("*").get((request, response) => {
 	response.redirect('/');
 });
 
-module.exports = app;
+app.listen(process.env.PORT || 8084)
